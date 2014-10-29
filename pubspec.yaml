@@ -1,0 +1,7 @@
+name: prefetchgen
+version: 0.0.1
+description: A command-line application to construct an HTML file full of <link rel="prefetch"> lines for any images found.
+environment:
+  sdk: '>=1.0.0 <2.0.0'
+dependencies:
+  path: any
