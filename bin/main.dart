@@ -30,8 +30,7 @@ void main() {
   List<FileSystemEntity> entList = dir.listSync(recursive: true, followLinks: false);
 
   // filter the list down to only image files
-  List<FileSystemEntity> imgFileList = entList.where(
-      (FileSystemEntity ent) => ent is File && imageExt.contains(Path.extension(ent.path))).toList();
+  List<FileSystemEntity> imgFileList = entList.where((FileSystemEntity ent) => ent is File && imageExt.contains(Path.extension(ent.path))).toList();
 
   // create a list of image file paths relative to the current directory
   List<String> imgPaths = imgFileList.map((File f) => f.path.split("${dir.path}\\").last.replaceAll(r"\", r"/")).toList();
