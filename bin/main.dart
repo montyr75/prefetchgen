@@ -52,7 +52,7 @@ void main() {
       .then((_) => stdout.writeln("$OUTPUT_FILENAME created."))
       .catchError(() {
         exitCode = 2;
-        print("Error writing file.");
+        stdout.writeln("Error writing file.");
     });
   }
 }
