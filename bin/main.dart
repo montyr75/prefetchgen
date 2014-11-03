@@ -49,7 +49,7 @@ void main() {
     stdout.write("${screenBuffer.toString()}");
 
     new File(OUTPUT_FILENAME).writeAsString(fileBuffer.toString())
-      .then((_) => print("$OUTPUT_FILENAME created."))
+      .then((_) => stdout.writeln("$OUTPUT_FILENAME created."))
       .catchError(() {
         exitCode = 2;
         print("Error writing file.");
