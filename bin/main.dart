@@ -16,7 +16,8 @@ final List<String> imageExt = const <String>[
   ".jp2",
   ".jpx",
   ".j2k",
-  ".j2c"
+  ".j2c",
+  ".svg"
 ];
 
 void main() {
